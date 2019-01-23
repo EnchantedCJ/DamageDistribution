@@ -5305,14 +5305,14 @@
                 type: 'heatmap',
                 coordinateSystem: 'bmap',
                 data: pixelHeatpoints,
-                pointSize: 60,
-                blurSize: 180
+                pointSize: 100,
+                blurSize: 100
             })
             op.visualMap={
                 show: true,
                 top: 'top',
                 min: 0,
-                max: 5000,
+                max: 47381,
                 seriesIndex: ops.length-1,
                 calculable: true,
                 inRange: {
@@ -5320,7 +5320,9 @@
                 },
                 outOfRange: {
                     color: ['red']
-                }
+                },
+                text: ['公里网格人口分布\nPopulation grid (1km)',''],
+                textGap: 20
             }
             myChart.setOption(op);
         }
